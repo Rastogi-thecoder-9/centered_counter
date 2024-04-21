@@ -5,4 +5,14 @@
  * @param {number} [step] - The step to increment each number in the sequence. Default is 1.
  * @returns {Function} - A function that generates the number sequence every time it is called.
  */
-export const factory = (start?: number, step?: number) => {};
+export const factory = (start?: number, step?: number):() => {
+  if(start){
+  return start;
+}
+  else if(step){
+  return step;
+}
+ else if(start && step){ 
+  return start + step
+ }
+};
